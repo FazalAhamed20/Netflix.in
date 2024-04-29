@@ -5,6 +5,7 @@ import { UserAuth } from '../context/AuthContext'
 const Signup = () => {
   const [email,setEmail]=useState('')
   const [password,setPassword]=useState('')
+  const [error,setError]=useState('')
   const {signUp,user}=UserAuth()
   let navigate=useNavigate()
   const Handle=async (e)=>{
@@ -16,7 +17,7 @@ const Signup = () => {
     
       
     } catch (error) {
-      console.log(error);
+      alert(error.message)
       
     }
 

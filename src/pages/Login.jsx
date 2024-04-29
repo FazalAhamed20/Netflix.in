@@ -18,7 +18,7 @@ function Login() {
     
       
     } catch (error) {
-      setError(error.message)
+      alert(error.message)
       
     }
 
@@ -36,8 +36,9 @@ function Login() {
         <div className='max-w-[450px] h-[600px] mx-auto bg-black/75 text-white'>
           <div className='max-w-[320px] mx-auto py-16'>
             <h1 className='text-3xl font-bold '>Sign In</h1>
-            {error ? <p className='bg-red-600 p-3 my-2'>{error}</p> : null}
+                         
             <form onSubmit={Handle} className='w-full flex flex-col py-4'>
+            
               <input onChange={(e)=>setEmail(e.target.value)}  className='p-3 my-2 bg-gray-700 rounded' type="email" placeholder='Email' autoComplete='email'/>
               <input onChange={(e)=>setPassword(e.target.value)}  className='p-3 my-2 bg-gray-700 rounded' type="password" placeholder='Password' autoComplete='current-password' />
               <button className='rounded bg-red-600 font-bold py-3 my-6'>Sign In</button>
